@@ -1,32 +1,14 @@
-<img align="left" width="30%" hspace="2%" src="https://raw.githubusercontent.com/do-mpc/do-mpc/master/documentation/source/static/dompc_var_02_rtd_blue.png">
-
 # Model predictive control python toolbox
+This is a fork to have a handy source for remote deployment of projects that use a fixed MHE.
 
-[![Documentation Status](https://readthedocs.org/projects/do-mpc/badge/?version=latest)](https://www.do-mpc.com)
-[![Build Status](https://app.travis-ci.com/do-mpc/do-mpc.svg?branch=master)](https://app.travis-ci.com/do-mpc/do-mpc)
-[![PyPI version](https://badge.fury.io/py/do-mpc.svg)](https://badge.fury.io/py/do-mpc)
-[![awesome](https://img.shields.io/badge/awesome-yes-brightgreen.svg?style=flat-square)](https://github.com/do-mpc/do-mpc)
-
-**do-mpc** is a comprehensive open-source toolbox for robust **model predictive control (MPC)**
-and **moving horizon estimation (MHE)**.
-**do-mpc** enables the efficient formulation and solution of control and estimation problems for nonlinear systems,
-including tools to deal with uncertainty and time discretization.
-The modular structure of **do-mpc** contains simulation, estimation and control components
-that can be easily extended and combined to fit many different applications.
-
-In summary, **do-mpc** offers the following features:
-
-* nonlinear and economic model predictive control
-* support for differential algebraic equations (DAE)
-* time discretization with orthogonal collocation on finite elements
-* robust multi-stage model predictive control
-* moving horizon state and parameter estimation
-* modular design that can be easily extended
-
-The **do-mpc** software is Python based and works therefore on any OS with a Python 3.x distribution. **do-mpc** has been developed by Sergio Lucia and Alexandru Tatulea at the DYN chair of the TU Dortmund lead by Sebastian Engell. The development is continued at the [Laboratory of Process Automation Systems](https://pas.bci.tu-dortmund.de) (PAS) of the TU Dortmund by Felix Fiedler and Sergio Lucia.
+## Building Wheels
+For releases, I used `poetry build` command and then uploaded release binaries to the github page. In other projects, I use `poetry add path/to/git/relase/binaries`. E.g.:
+```shell
+poetry add https://github.com/factorio-solutions/do-mpc-fixed/releases/download/v4.3.5.1/do-mpc-4.3.5.1.tar.gz
+```
 
 ## Installation instructions
-Installation instructions are given [here](https://www.do-mpc.com/en/latest/installation.html).
+Installation instructions for the original `do-mpc` are given [here](https://www.do-mpc.com/en/latest/installation.html).
 
 ## Documentation
 Please visit our extensive [documentation](https://www.do-mpc.com), kindly hosted on readthedocs.

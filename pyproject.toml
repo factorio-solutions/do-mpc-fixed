@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "do-mpc"
+version = "4.3.5.1"
+description = "Fix for Sparsity error"
+authors = ["Martin Ron <martin.ron@factorio.cz>"]
+license = "LGPL3.0"
+
+[[tool.poetry.source]]
+name = 'pypi_'  # needed until python-poetry/poetry#3456 is resolved.
+url = 'https://pypi.org/simple'
+secondary = false
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+Sphinx = "^5.0.2"
+ipykernel = "^6.15.1"
+nbsphinx = "^0.8.9"
+docutils = ">=0.14,<0.19"
+sphinx-copybutton = "^0.5.0"
+graphviz = "^0.20"
+numpy = "^1.23.1"
+matplotlib = "^3.5.2"
+recommonmark = "^0.7.1"
+scipy = "^1.8.1"
+pygments = "^2.12.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
