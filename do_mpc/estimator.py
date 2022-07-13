@@ -260,7 +260,8 @@ class MHE(do_mpc.optimizer.Optimizer, Estimator):
                 _p_subs.append(self._p_set[name])
 
         # In the expression p_cat substitute all variables from _p with the elements from _p_est and _p_set:
-        p_cat = substitute(p_cat, _p, vertcat(*_p_subs))
+        if len(_p_subs) > 1:  # Not only 'default' in the list
+    	    p_cat = substitute(p_cat, _p, vertcat(*_p_subs))
 
         # Function to obtain full set of parameters from the seperate structs (while obeying the order):
         self._p_cat_fun = Function('p_cat_fun', [self._p_est, self._p_set], [p_cat])
